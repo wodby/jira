@@ -6,6 +6,8 @@
 
 [![Wodby Slack](https://www.google.com/s2/favicons?domain=www.slack.com) Join us on Slack](https://slack.wodby.com/)
 
+This image is based on https://github.com/cptactionhank/docker-atlassian-jira-software
+
 ## Supported tags and respective `Dockerfile` links:
 
 - [`7.2`, `latest` (*7.2/Dockerfile*)](https://github.com/wodby/php/tree/master/7.2/Dockerfile)
