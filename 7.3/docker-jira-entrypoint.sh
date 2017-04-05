@@ -6,6 +6,6 @@ if [[ -n "${DEBUG}" ]]; then
   set -x
 fi
 
-chown -R daemon:daemon /var/atlassian/jira
+chown daemon:daemon /var/atlassian/jira
 
-exec /docker-entrypoint.sh "${@}"
+gosu daemon /docker-entrypoint.sh "${@}"
