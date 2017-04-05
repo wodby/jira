@@ -5,7 +5,7 @@ COPY server.xml /opt/atlassian/jira/conf/server.xml
 
 USER root
 
-RUN apt-get install gosu
+RUN apt-get update && apt-get install gosu
 
 ENTRYPOINT ["/docker-jira-entrypoint.sh"]
 
