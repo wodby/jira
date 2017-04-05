@@ -16,4 +16,4 @@ This image is based on https://github.com/cptactionhank/docker-atlassian-jira-so
 
 ## Using in Production
 
-Deploy PHP container to your own server via [![Wodby](https://www.google.com/s2/favicons?domain=wodby.com) Wodby](https://wodby.com).
+Deploy Jira container with HTTPs to your own server via [![Wodby](https://www.google.com/s2/favicons?domain=wodby.com) Wodby](https://wodby.com).
