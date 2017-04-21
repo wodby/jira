@@ -17,7 +17,8 @@ if [[ -n "${CONFLUENCE_HOST}" ]]; then
 
     url="${CONFLUENCE_HOST}:${CONFLUENCE_PORT}"
     openssl s_client -connect "${url}"  < /dev/null | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > /tmp/cert.pem
-    "${jre}/bin/keytool" -import -alias confluence -trustcacerts -keystore "${jre}/lib/security/cacerts" -file /tmp/cert.pem
+    "${jre}/bin/keytool" -import -alias confluence -trustcacerts -keystore "${jre}/lib/security/cacerts" \
+        -file /tmp/cert.pem -storepass changeit -noprompt
     rm /tmp/cert.pem
 fi
 
