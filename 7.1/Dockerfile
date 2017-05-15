@@ -2,14 +2,14 @@ FROM openjdk:8-alpine
 
 ENV JIRA_HOME /var/atlassian/jira
 ENV JIRA_INSTALL /opt/atlassian/jira
-ENV JIRA_VERSION 7.3.6
+ENV JIRA_VERSION 7.1.10
 ENV POSTGRES_VERSION 9.4.1212
 
 ENV JIRA_DOWNLOAD_URL https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-${JIRA_VERSION}.tar.gz
 ENV POSTGRES_DOWNLOAD_URL https://jdbc.postgresql.org/download/postgresql-${POSTGRES_VERSION}.jar
 
 RUN set -ex && \
-    apk add --update bash curl su-exec tar tomcat-native && \
+    apk add --update bash curl libressl su-exec tar tomcat-native && \
     mkdir -p "${JIRA_HOME}" "${JIRA_HOME}/caches/indexes" && \
     chmod -R 700 "${JIRA_HOME}" && chown -R daemon:daemon "${JIRA_HOME}" && \
     mkdir -p "${JIRA_INSTALL}/conf/Catalina" && \

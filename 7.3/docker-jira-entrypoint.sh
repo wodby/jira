@@ -9,7 +9,7 @@ fi
 chown daemon:daemon /var/atlassian/jira
 
 if [[ -n "${CONFLUENCE_HOST}" ]]; then
-    jre="/usr/lib/jvm/java-8-openjdk-amd64/jre"
+    jre="/usr/lib/jvm/java-1.8-openjdk/jre"
 
     if [[ -z "${CONFLUENCE_PORT}" ]]; then
         CONFLUENCE_PORT=443
@@ -22,4 +22,4 @@ if [[ -n "${CONFLUENCE_HOST}" ]]; then
     rm /tmp/cert.pem
 fi
 
-gosu daemon /docker-entrypoint.sh "${@}"
+su-exec daemon "${@}"

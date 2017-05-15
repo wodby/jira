@@ -2,7 +2,7 @@ FROM openjdk:8-alpine
 
 ENV JIRA_HOME /var/atlassian/jira
 ENV JIRA_INSTALL /opt/atlassian/jira
-ENV JIRA_VERSION 7.2.8
+ENV JIRA_VERSION 7.0.11
 ENV POSTGRES_VERSION 9.4.1212
 
 ENV JIRA_DOWNLOAD_URL https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-${JIRA_VERSION}.tar.gz
