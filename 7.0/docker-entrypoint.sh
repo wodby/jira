@@ -3,7 +3,7 @@
 set -e
 
 if [[ -n "${DEBUG}" ]]; then
-  set -x
+    set -x
 fi
 
 if [[ "${1}" == 'make' ]]; then
@@ -18,7 +18,7 @@ else
 
         url="${CONFLUENCE_HOST}:${CONFLUENCE_PORT}"
         openssl s_client -connect "${url}"  < /dev/null | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > /tmp/cert.pem
-        "${JAVA_HOME}/jre/bin/keytool" -import -alias confluence -trustcacerts -keystore "${JAVA_HOME}/jre/lib/security/cacerts" \
+        "${JAVA_HOME}/bin/keytool" -import -alias confluence -trustcacerts -keystore "${JAVA_HOME}/lib/security/cacerts" \
             -file /tmp/cert.pem -storepass changeit -noprompt
         rm /tmp/cert.pem
     fi

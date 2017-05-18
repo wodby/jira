@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/wodby/jira.svg?branch=master)](https://travis-ci.org/wodby/jira)
 [![Docker Pulls](https://img.shields.io/docker/pulls/wodby/jira.svg)](https://hub.docker.com/r/wodby/jira)
 [![Docker Stars](https://img.shields.io/docker/stars/wodby/jira.svg)](https://hub.docker.com/r/wodby/jira)
+[![Wodby Slack](http://slack.wodby.com/badge.svg)](http://slack.wodby.com)
 
 ## Supported tags and respective `Dockerfile` links:
 
