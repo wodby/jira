@@ -9,7 +9,7 @@ ENV JIRA_DOWNLOAD_URL https://www.atlassian.com/software/jira/downloads/binary/a
 ENV POSTGRES_DOWNLOAD_URL https://jdbc.postgresql.org/download/postgresql-${POSTGRES_VERSION}.jar
 
 RUN set -ex && \
-    apk add --update bash curl libressl su-exec tar tomcat-native && \
+    apk add --update bash curl libressl make su-exec tar tomcat-native && \
     mkdir -p "${JIRA_HOME}" "${JIRA_HOME}/caches/indexes" && \
     chmod -R 700 "${JIRA_HOME}" && chown -R daemon:daemon "${JIRA_HOME}" && \
     mkdir -p "${JIRA_INSTALL}/conf/Catalina" && \
@@ -26,9 +26,10 @@ VOLUME ["/var/atlassian/jira", "/opt/atlassian/jira/logs"]
 
 WORKDIR /var/atlassian/jira
 
-COPY docker-jira-entrypoint.sh /
+COPY docker-entrypoint.sh /
 COPY server.xml /opt/atlassian/jira/conf/server.xml
+COPY actions /usr/local/bin/
 
-ENTRYPOINT ["/docker-jira-entrypoint.sh"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
 
 CMD ["/opt/atlassian/jira/bin/catalina.sh", "run"]
