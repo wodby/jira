@@ -64,11 +64,12 @@
                    acceptCount="100"
                    disableUploadTimeout="true"
                    bindOnInit="false"
-
+                   {{ if getenv "JIRA_HTTPS" }}
                    proxyPort="443"
                    secure="true"
-                   scheme="https"/>
-
+                   scheme="https"
+                   {{ end }}
+        />
         <!--
         ====================================================================================
 

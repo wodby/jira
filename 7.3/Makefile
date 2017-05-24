@@ -1,9 +1,9 @@
 -include env_make
 
-VERSION ?= 7.3
+VERSION ?= 7.0
 
 REPO = wodby/jira
-NAME = jira-7.3
+NAME = jira-7.0
 
 .PHONY: build test push shell run start stop logs clean release
 

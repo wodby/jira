@@ -12,6 +12,14 @@
 - [`7.1`, (*7.1/Dockerfile*)](https://github.com/wodby/jira/tree/master/7.1/Dockerfile)
 - [`7.0`, (*7.0/Dockerfile*)](https://github.com/wodby/jira/tree/master/7.0/Dockerfile)
 
+## Environment variables available for customization
+
+| Environment Variable | Default Value | Description |
+| -------------------- | ------------- | ----------- |
+| JIRA_HTTPS      |     | |
+| CONFLUENCE_HOST |     | |
+| CONFLUENCE_PORT | 443 | |
+
 ## Actions
 
 Usage:
@@ -25,7 +33,7 @@ default params values:
     host localhost
     max_try 1
     wait_seconds 1
-    delay_seconds 1
+    delay_seconds 0
 ```
 
 Examples:
