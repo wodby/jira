@@ -20,29 +20,6 @@
 | CONFLUENCE_HOST |     | |
 | CONFLUENCE_PORT | 443 | |
 
-## Actions
+## Deployment
 
-Usage:
-```
-make COMMAND [params ...]
-
-commands:
-    check-ready [host max_try wait_seconds]
- 
-default params values:
-    host localhost
-    max_try 1
-    wait_seconds 1
-    delay_seconds 0
-```
-
-Examples:
-
-```bash
-# Wait for Jira to start
-docker exec -ti [ID] make check-ready max_try=12 wait_seconds=5 delay_seconds=20 -f /usr/local/bin/actions.mk
-```
-
-## Using in production
-
-Deploy Jira Software container to your server via [![Wodby](https://www.google.com/s2/favicons?domain=wodby.com) Wodby](https://wodby.com).
+Deploy Jira Software stack to your server via [![Wodby](https://www.google.com/s2/favicons?domain=wodby.com) Wodby](https://cloud.wodby.com/stackhub/6e9cb42d-f306-4fbf-baba-f30184c22483/overview).
