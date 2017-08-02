@@ -2,7 +2,7 @@ FROM openjdk:8-jre-alpine
 
 ENV JIRA_HOME /var/atlassian/jira
 ENV JIRA_INSTALL /opt/atlassian/jira
-ENV JIRA_VERSION 7.3.6
+ENV JIRA_VERSION 7.3.8
 ENV PG_JDBC_VER 9.4.1212
 
 ENV GOTLP_VER 0.1.5
