@@ -27,22 +27,6 @@ Images are built via [Travis CI](https://travis-ci.org/wodby/jira) and published
 | CONFLUENCE_HOST |               |             |
 | CONFLUENCE_PORT | 443           |             |
 
-## Actions
-
-Usage:
-```
-make COMMAND [params ...]
-
-commands:
-    check-ready [host max_try wait_seconds]
- 
-default params values:
-    host localhost
-    max_try 1
-    wait_seconds 1
-    delay_seconds 0
-```
-
 ## Deployment
 
-Deploy docker-based Jira Software stack to your server via [![Wodby](https://www.google.com/s2/favicons?domain=wodby.com) Wodby](https://cloud.wodby.com/stackhub/6e9cb42d-f306-4fbf-baba-f30184c22483/overview).
+Deploy Jira Software stack to your server via [![Wodby](https://www.google.com/s2/favicons?domain=wodby.com) Wodby](https://cloud.wodby.com/stackhub/6e9cb42d-f306-4fbf-baba-f30184c22483/overview).
