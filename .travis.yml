@@ -7,8 +7,9 @@ services:
 
 env:
   global:
-    - LATEST_VERSION=7.3
+    - LATEST_VERSION=7.4
   matrix:
+    - VERSION=7.4
     - VERSION=7.3
     - VERSION=7.2
     - VERSION=7.1
@@ -31,5 +32,3 @@ after_success: |
       make VERSION=latest release
     fi
   fi
-
-after_failure: make logs

@@ -45,4 +45,4 @@ default params values:
 
 ## Deployment
 
-Deploy docker-based Jira Software to your server via [![Wodby](https://www.google.com/s2/favicons?domain=wodby.com) Wodby](https://wodby.com).
+Deploy docker-based Jira Software stack to your server via [![Wodby](https://www.google.com/s2/favicons?domain=wodby.com) Wodby](https://cloud.wodby.com/stackhub/6e9cb42d-f306-4fbf-baba-f30184c22483/overview).
